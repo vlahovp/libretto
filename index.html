@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+   
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <script type="text/javascript" src='js/jquery.min.js'></script>
+    <script type="text/javascript" src='js/bootstrap.min.js'></script>
+    <title>Libretto scolastico</title>
+
+  
+   
+
+  </head>
+
+  <body>
+    <!-- This code is in the public domain. Enjoy! -->
+   <nav class='navbar navbar-default'>
+     <div class="container-fluid">
+       <div class="navbar-header">
+         <button class='navbar-toggle collapsed' data-toggle='collapse' data-target='#tools' > <span class='glyphicon glyphicon-option-vertical'></span></button>
+         <a class='navbar-brand'>Libretto Scolastico </a>
+       </div>
+       <div id='tools' class="collapse navbar-collapse"> <!-- messo da bustrap che dopo un certo punto fa sparire il robo-->
+     
+         <ul class='nav navbar-nav'> 
+           <li> <a href='#' id='add' data-toggle='modal' data-target='#mymodal'><span class='glyphicon glyphicon-plus'></span>Add</a></li>
+         </ul>
+       </div>
+     </div>
+    </nav>
+    
+    <div id='mymodal' class='modal fade' tabindex='-l' role='dialog'>
+      <div class='modal-dialog'>
+        <div class='modal-content'>
+          <div class='modal-header'>
+            <h4 class='modal-title'>Aggiungi Nuovo Voto </h4>
+          </div>
+          
+          <div class='modal-body container-fluid'>
+             <form>
+            <div class="form-group">
+              <label>Materia</label>
+                <input type='text' name='materia'placeholder='materia' class='form-control' > 
+               </div>
+               
+               <div class="form-group">
+                  <label>Voto</label>
+                  <input name='voto' type='number' min=0 max=10 value=0 class='form-control'>
+               </div>
+               
+               
+               <div class="form-group">
+                  <label>Data</label>
+                 <input type='text' name='data'placeholder='data' class='form-control'>
+               </div>
+           
+            </form>
+         </div>
+          
+          <div class='modal-footer'>
+            <button data-dismiss='modal' class='btn btn-default'> Annulla</button>
+            <button  id='save' class='btn btn-primary'>Aggiungi</button>
+          </div>
+         
+          
+          
+       
+        </div>
+      </div>
+    </div>
+  
+    <div class='container-fluid'>
+    <ul id='libretto' class="list-group">
+    
+    </ul>
+    </div>
+   
+     <script src="app.js" defer></script>
+  </body>
+
+</html>
